@@ -14,6 +14,6 @@ namespace SW.Payroll
         public bool IsDanger { get; set; }
         public bool HasPensionPlan { get; set; }
         public HealthInsurancePackage? HealthInsurancePackage { get; set; } 
-        public WorkPlatform WorkPlatform { get; set; } 
+        public WorkPlatform WorkPlatform { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using Moq;
 namespace SW.Payroll.Tests;
 
 public class SalarySplitProcessorTests
-{
+{    
     /**
      *[Fact]
      *public void Method_Senario_Outcome()
@@ -20,8 +20,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = null;
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         Func<Employee, decimal> func = (e) => processor.CalculateBasicSalary(e);
 
@@ -33,8 +32,7 @@ public class SalarySplitProcessorTests
     {
         var employee = new Employee { Wage = 50, WorkingDays = 20 };
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         var actual = processor.CalculateBasicSalary(employee);
         var expected = 1000m;
@@ -48,8 +46,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = null;
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         Func<Employee, decimal> func = (e) => processor.CalculateTransportationAllowece(e);
 
@@ -61,8 +58,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = new Employee { WorkPlatform = WorkPlatform.Office };
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         var actual = processor.CalculateTransportationAllowece(employee);
         var expected = Constants.TransportationAllowanceAmount;
@@ -75,8 +71,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = new Employee { WorkPlatform = WorkPlatform.Remote };
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         var actual = processor.CalculateTransportationAllowece(employee);
         var expected = 0m;
@@ -89,8 +84,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = new Employee { WorkPlatform = WorkPlatform.Hybrid };
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         var actual = processor.CalculateTransportationAllowece(employee);
         var expected = Constants.TransportationAllowanceAmount / 2;
@@ -105,8 +99,7 @@ public class SalarySplitProcessorTests
     {
         Employee employee = null;
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         Func<Employee, decimal> func = (e) => processor.CalculateDangerPay(e);
 
@@ -118,8 +111,7 @@ public class SalarySplitProcessorTests
     {
         var employee = new Employee { IsDanger = true };
 
-        var zone = new ZoneService();
-        var processor = new SalarySlipProcessor(zone);
+        var processor = new SalarySlipProcessor(null);
 
         var actual = processor.CalculateDangerPay(employee);
         var expected = Constants.DangerPayAmount;
