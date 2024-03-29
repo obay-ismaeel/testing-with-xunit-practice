@@ -1,6 +1,6 @@
 using Moq;
 
-namespace SW.Payroll.Tests;
+namespace UnitTesting.Payroll.Tests;
 
 public class SalarySplitProcessorTests
 {    

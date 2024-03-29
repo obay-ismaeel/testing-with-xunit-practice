@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SW.Projects.Exceptions
+namespace UnitTesting.Projects.Exceptions
 {
     public class InvalidIssueDescriptionException : Exception
     {

@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SW.Payroll\SW.Payroll.csproj" />
+    <ProjectReference Include="..\UnitTesting.Payroll\UnitTesting.Payroll.csproj" />
   </ItemGroup>
 
 </Project>

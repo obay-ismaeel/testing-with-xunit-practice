@@ -1,4 +1,4 @@
-﻿namespace SW.Projects
+﻿namespace UnitTesting.Projects
 {
     public enum Category
     {

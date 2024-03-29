@@ -1,8 +1,8 @@
 ﻿using System;
-using SW.Projects;
-using SW.Projects.Exceptions;
+using UnitTesting.Projects;
+using UnitTesting.Projects.Exceptions;
 
-namespace SW.Projects
+namespace UnitTesting.Projects
 {
     public class Issue
     {

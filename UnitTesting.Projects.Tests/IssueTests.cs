@@ -1,4 +1,4 @@
-﻿using SW.Projects.Exceptions;
+﻿using UnitTesting.Projects.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace SW.Projects.Tests;
+namespace UnitTesting.Projects.Tests;
 
 public class IssueTests
 {
